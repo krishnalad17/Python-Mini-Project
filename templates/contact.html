@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block title %}Contact | Men & Menstruation{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+    <h1 class="text-white mb-4">Contact Us</h1>
+    <p class="text-white">Have any questions, feedback, or suggestions? We'd love to hear from you!</p>
+    <form class="mt-4" method="POST" action="{{ url_for('contact') }}">
+        <div class="mb-3">
+            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="mb-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-light">Send Message</button>
+    </form>
+</div>
+{% endblock %}
